@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [valor, setValor] = useState(0);
   const [texto, setTexto] = useState('O texto vai aparecer aqui');
-  const [enviado, setEnviado] = useState('N/A');
+  const [enviado, setEnviado] = useState('');
   const [textArea, setTextArea] = useState('Clique aqui e coloque algo');
 
   const handleContador = (valorer) => {
@@ -42,9 +42,12 @@ function App() {
           <button onClick={() => handleClick(texto)}>
             Clique para enviar o texto que está no Input Text
           </button>
-          <p>Texto enviado: {enviado}</p>
+          <br></br>
+          {/* Como tem o curto-circuito, não irá aparecer se a String estiver vazia */}
+          {!!enviado && <p>Texto enviado: {enviado}</p>}
           <textarea onChange={handleTextBox} />
           <br></br>
+
           <button onClick={() => handleClick(textArea)}>
             Clique para enviar o que está na Text Area
           </button>
