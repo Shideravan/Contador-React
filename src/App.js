@@ -40,7 +40,7 @@ function App() {
             onChange={handleTexto}
           ></input>
           <button onClick={() => handleClick(texto)}>
-            Clique para enviar o texto que está no Input Text
+            Clique para enviar o texto que está no Input Text =)
           </button>
           <br></br>
           {/* Como tem o curto-circuito, não irá aparecer se a String estiver vazia */}
