@@ -43,7 +43,7 @@ function App() {
             Clique para enviar o texto que está no Input Text =)
           </button>
           <br></br>
-          {/* Como tem o curto-circuito, não irá aparecer se a String estiver vazia */}
+          {/* Como tem o curto-circuito, não irá aparecer se a String estiver vazia. */}
           {!!enviado && <p>Texto enviado: {enviado}</p>}
           <textarea onChange={handleTextBox} />
           <br></br>
